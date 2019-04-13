@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <title>통계</title>
+    <link rel="stylesheet" href='https://common.gaon.xyz/css/nanum_font/nanumbarungotic.css' type='text/css'>
+    <link rel="stylesheet" href="https://common.gaon.xyz/css/counterup/counterup.css" />
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="../common/js/jquery/jquery-1.10.2.min.js"></script>
+  <script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1500
+        });
+    });
+  </script>
+<!--uikit css 불러오기-->
+<link rel="stylesheet" href="https://common.gaon.xyz/css/uikit/uikit.edit.css" />
+<nav class="uk-navbar-container">
+    <div class="uk-navbar-left">
+        <a class="uk-navbar-item uk-logo" href="../index.html">이 멋진 IT에 축복을!</a>
+            <div uk-navbar>
+                <ul class="uk-navbar-nav">
+                <li>
+                    <a href="#">이 멋진 IT에 축복을!</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-nav-header">소개</li>
+                            <li><a href="../team_intro/index.html">소개합니다!</a></li>
+                            <li><a href="#">팀원 소개</a></li>
+                            <li><a href="../thanks/index.html">도움을 주신 분들</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">활동들</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li class="uk-nav-header">Header</li>
+                            <li><a href="#">Item</a></li>
+                            <li class="uk-nav-header">제작 과정</li>
+                            <li><a href="../process/index.html">프로젝트 제작 과정</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Parent</a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-active"><a href="#">Active</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">
+                       <span class="uk-icon uk-margin-small-right" uk-icon="icon: github"></span>
+                    깃허브
+                    </a>
+                    <div class="uk-navbar-dropdown">
+                        <ul class="uk-nav uk-navbar-dropdown-nav">
+                            <li class="uk-nav-header">프로젝트 깃허브</li>
+                            <li><a href="https://github.com/konosuba-it/konosuba-it" target="_blank">바로가기</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </div>
+    </div>
+</nav>
+<style type="text/css">
+/* 링크에서 밑줄 없애기 */
+A:link {text-decoration:none; color:#000000;}
+A:visited {text-decoration:none; color:#000000;}
+A:active {text-decoration:none; color:#000000;}
+A:hover {text-decoration:none; color:#000000;}
+</style>
+
+<!--uikit js 불러오기-->
+<script src="https://common.gaon.xyz/js/uikit/uikit.min.js"></script>
+</head>
+
+<body>
+  <h2>
+    이 페이지는?
+  </h2>
+      <li>이 페이지는 프로젝트를 통해 만들어진 HTML 페이지에 사용된 모든 태그의 사용 횟수를 보실 수 있습니다.</li>
+      <li>태그를 클릭하면, 해당 태그에 대한 설명을 보실 수 있습니다.</li>
+      <li>태그를 더 빨리 찾는 방법! 아래의 분야별 찾기 버튼을 이용하거나, 브라우저의 '페이지 내 찾기' 기능을 이용해 보세요!</li>
+  <hr> 
+  <h2>분야별 찾기</h2>
+    <a class="uk-button uk-button-default" href="#basic_tag" uk-scroll>기본 태그</a>
+    <a class="uk-button uk-button-primary" href="#import_tag" uk-scroll>불러오기 태그</a>
+    <a class="uk-button uk-button-secondary" href="#line_tag" uk-scroll>줄(Line) 관련 태그</a>
+    <a class="uk-button uk-button-danger" href="#letter_tag" uk-scroll>글자 태그</a>
+  <br>
+  <hr>
+<!--나중에 a 태그에 링크 걸어서 각 태그에 대한 설명을 표시해 주기로 하자.-->
+  <div style="height: 250px;">
+  <h2>태그별 사용 횟수</h2>
+  <a id="basic_tag"></a><h3>기본 태그</h3>
+    <a>HTML 태그 사용 횟수 : <span class="counter">5</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a>HEAD 태그 사용 횟수<span class="counter">5</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a>BODY 태그 사용 횟수<span class="counter">5</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </div>
+  <div style="height: 250px;">
+  <a id="import_tag"></a><h3>불러오기 태그</h3>
+    <a>SCRIPT 태그 사용 횟수<span class="counter">19</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a>Link 태그 사용 횟수<span class="counter">10</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a>img 태그 사용 횟수<span class="counter">1</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </div>
+  <div style="height: 250px;">
+  <a id="line_tag"></a><h3>줄(Line) 관련 태그</h3>
+      <a>BR 태그 사용 횟수<span class="counter">26</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>HR 태그 사용 횟수<span class="counter">4</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </div>
+  <a id="letter_tag"></a><div style="height: 250px;">
+    <h3>글자 태그</h3>
+      <a>a 태그 사용 횟수<span class="counter">110</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>h(1~6) 태그 사용 횟수<span class="counter">27</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </div>
+    <script src="js/waypoints/waypoints.min.js"></script>
+    <script src="js/jquery.counterup/jquery.counterup.js"></script>
+</body>
+</html>
