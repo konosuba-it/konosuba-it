@@ -100,8 +100,9 @@ A:hover {text-decoration:none; color:#000000;}
   <h2>분야별 찾기</h2>
     <a class="uk-button uk-button-default" href="#basic_tag" uk-scroll>기본 태그</a>
     <a class="uk-button uk-button-primary" href="#import_tag" uk-scroll>불러오기 태그</a>
-    <a class="uk-button uk-button-secondary" href="#line_tag" uk-scroll>줄(Line) 관련 태그</a>
-    <a class="uk-button uk-button-danger" href="#letter_tag" uk-scroll>글자 태그</a><br><br>
+	<a class="uk-button uk-button-danger" href="#territory_tag" uk-scroll>영역 태그</a>
+    <a class="uk-button uk-button-secondary" href="#line_tag" uk-scroll>줄(Line) 관련 태그</a><br><br>
+    <a class="uk-button uk-button-primary" href="#letter_tag" uk-scroll>글자 태그</a>
     <a class="uk-button uk-button-secondary" href="#show_circle_graph" uk-scroll>원 그래프로 보기</a>
   <br>
   <hr>
@@ -119,6 +120,11 @@ A:hover {text-decoration:none; color:#000000;}
     <a>Link 태그 사용 횟수<span class="counter">7</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a>img 태그 사용 횟수<span class="counter">1</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </div>
+  <a id="territory_tag"></a><div style="height: 250px;">
+    <h3>영역 태그</h3>
+      <a>DIV 태그 사용 횟수<span class="counter">107</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>SPAN 태그 사용 횟수<span class="counter">23</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </div>
   <div style="height: 250px;">
   <a id="line_tag"></a><h3>줄(Line) 관련 태그</h3>
       <a>BR 태그 사용 횟수<span class="counter">30</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
@@ -126,7 +132,7 @@ A:hover {text-decoration:none; color:#000000;}
   </div>
   <a id="letter_tag"></a><div style="height: 250px;">
     <h3>글자 태그</h3>
-      <a>a 태그 사용 횟수<span class="counter">107</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>a 태그 사용 횟수<span class="counter">110</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
       <a>h(1~6) 태그 사용 횟수<span class="counter">23</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </div>
     <script src="https://common.gaon.xyz/js/waypoints/waypoints.min.js"></script>
@@ -161,9 +167,11 @@ A:hover {text-decoration:none; color:#000000;}
           ['SCRIPT 태그', 17],
           ['LINK 태그', 7],
           ['img 태그', 1],
+		  ['DIV 태그', 62],
+		  ['SPAN 태그', 35],
           ['BR 태그', 30],
           ['HR 태그', 5],
-          ['a 태그', 107],
+          ['a 태그', 110],
           ['h(1~6) 태그', 23]
         ]);
 
