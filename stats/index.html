@@ -95,12 +95,14 @@ A:hover {text-decoration:none; color:#000000;}
       <li>이 페이지는 프로젝트를 통해 만들어진 HTML 페이지에 사용된 모든 태그의 사용 횟수를 보실 수 있습니다.</li>
       <li>태그를 클릭하면, 해당 태그에 대한 설명을 보실 수 있습니다.</li>
       <li>태그를 더 빨리 찾는 방법! 아래의 분야별 찾기 버튼을 이용하거나, 브라우저의 '페이지 내 찾기' 기능을 이용해 보세요!</li>
+      <li>한눈에 보기 원하시다면, 아래의 '원 그래프로 보기' 버튼을 눌러보세요! 원 그래프로 비율을 볼 수 있습니다!</li>
   <hr> 
   <h2>분야별 찾기</h2>
     <a class="uk-button uk-button-default" href="#basic_tag" uk-scroll>기본 태그</a>
     <a class="uk-button uk-button-primary" href="#import_tag" uk-scroll>불러오기 태그</a>
     <a class="uk-button uk-button-secondary" href="#line_tag" uk-scroll>줄(Line) 관련 태그</a>
-    <a class="uk-button uk-button-danger" href="#letter_tag" uk-scroll>글자 태그</a>
+    <a class="uk-button uk-button-danger" href="#letter_tag" uk-scroll>글자 태그</a><br><br>
+    <a class="uk-button uk-button-secondary" href="#show_circle_graph" uk-scroll>원 그래프로 보기</a>
   <br>
   <hr>
 <!--나중에 a 태그에 링크 걸어서 각 태그에 대한 설명을 표시해 주기로 하자.-->
@@ -113,21 +115,70 @@ A:hover {text-decoration:none; color:#000000;}
   </div>
   <div style="height: 250px;">
   <a id="import_tag"></a><h3>불러오기 태그</h3>
-    <a>SCRIPT 태그 사용 횟수<span class="counter">15</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+    <a>SCRIPT 태그 사용 횟수<span class="counter">17</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a>Link 태그 사용 횟수<span class="counter">10</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a>img 태그 사용 횟수<span class="counter">1</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </div>
   <div style="height: 250px;">
   <a id="line_tag"></a><h3>줄(Line) 관련 태그</h3>
-      <a>BR 태그 사용 횟수<span class="counter">26</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      <a>HR 태그 사용 횟수<span class="counter">4</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>BR 태그 사용 횟수<span class="counter">31</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>HR 태그 사용 횟수<span class="counter">5</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </div>
   <a id="letter_tag"></a><div style="height: 250px;">
     <h3>글자 태그</h3>
-      <a>a 태그 사용 횟수<span class="counter">109</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-      <a>h(1~6) 태그 사용 횟수<span class="counter">22</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>a 태그 사용 횟수<span class="counter">110</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <a>h(1~6) 태그 사용 횟수<span class="counter">23</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
   </div>
     <script src="https://common.gaon.xyz/js/waypoints/waypoints.min.js"></script>
     <script src="https://common.gaon.xyz/js/jquery.counterup/jquery.counterup.min.js"></script>
+  <br>
+  <hr>
+  <br>
+  <a id="show_circle_graph"></a><h2>원 그래프로 한눈에 보기!</h2>
+    <!--Load the AJAX API-->
+    <script src="https:/common.gaon.xyz/js/google_chart/loader.js"></script>
+    <script>
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['HTML 태그', 5],
+          ['HEAD 태그', 5],
+          ['BODY 태그', 5],
+          ['SCRIPT 태그', 17],
+          ['LINK 태그', 10],
+          ['img 태그', 1],
+          ['BR 태그', 31],
+          ['HR 태그', 5],
+          ['a 태그', 110],
+          ['h(1~6) 태그', 23]
+        ]);
+
+        // Set chart options
+        var options = {'title':'얼마나 많은 태그들이 사용되었을까요?',
+                       'width':1200,
+                       'height':900};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  <!--Div that will hold the pie chart-->
+  <div id="chart_div"></div>
+
 </body>
 </html>
