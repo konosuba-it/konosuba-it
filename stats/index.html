@@ -82,7 +82,7 @@ A:hover {text-decoration:none; color:#000000;}
   <h2>분야별 찾기</h2>
     <a class="uk-button uk-button-default" href="#basic_tag" uk-scroll>기본 태그</a>
     <a class="uk-button uk-button-primary" href="#import_tag" uk-scroll>불러오기 태그</a>
-	<a class="uk-button uk-button-danger" href="#territory_tag" uk-scroll>영역 태그</a>
+	  <a class="uk-button uk-button-danger" href="#territory_tag" uk-scroll>영역 태그</a>
     <a class="uk-button uk-button-secondary" href="#line_tag" uk-scroll>줄(Line) 관련 태그</a><br><br>
     <a class="uk-button uk-button-danger" href="#letter_tag" uk-scroll>글자 태그</a>
     <a class="uk-button uk-button-secondary" href="#show_circle_graph" uk-scroll>원 그래프로 보기</a>
@@ -91,36 +91,36 @@ A:hover {text-decoration:none; color:#000000;}
 <!--나중에 a 태그에 링크 걸어서 각 태그에 대한 설명을 표시해 주기로 하자.-->
   <div style="height: 250px;">
   <h2>태그별 사용 횟수</h2>
-  <a id="basic_tag"></a><h3>기본 태그</h3>
+  <h3 id="basic_tag">기본 태그</h3>
     <a>HTML 태그 사용 횟수 : <span class="counter">6</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a>HEAD 태그 사용 횟수<span class="counter">6</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a>BODY 태그 사용 횟수<span class="counter">6</span>회</a>
   </div>
   <div style="height: 250px;">
-  <a id="import_tag"></a><h3>불러오기 태그</h3>
+  <h3 id="import_tag">불러오기 태그</h3>
     <a>SCRIPT 태그 사용 횟수<span class="counter">19</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a>Link 태그 사용 횟수<span class="counter">8</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
     <a>img 태그 사용 횟수<span class="counter">1</span>회</a>
   </div>
-  <a id="territory_tag"></a><div style="height: 250px;">
-    <h3>영역 태그</h3>
+  <div style="height: 250px;">
+    <h3 id="territory_tag">영역 태그</h3>
       <a>DIV 태그 사용 횟수<span class="counter">78</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
       <a>SPAN 태그 사용 횟수<span class="counter">40</span>회</a>
   </div>
   <div style="height: 250px;">
-  <a id="line_tag"></a><h3>줄(Line) 관련 태그</h3>
+  <h3 id="line_tag">줄(Line) 관련 태그</h3>
       <a>BR 태그 사용 횟수<span class="counter">42</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
       <a>HR 태그 사용 횟수<span class="counter">6</span>회</a>
   </div>
-  <a id="letter_tag"></a><div style="height: 250px;">
-    <h3>글자 태그</h3>
-      <a>a 태그 사용 횟수<span class="counter">133</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <div style="height: 250px;">
+    <h3 id="letter_tag">글자 태그</h3>
+      <a>a 태그 사용 횟수<span class="counter">127</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
       <a>h(1~6) 태그 사용 횟수<span class="counter">32</span>회</a>
   </div>
   <br>
   <hr>
   <br>
-  <a id="show_circle_graph"></a><h2>원 그래프로 한눈에 보기!</h2>
+  <h2 id="show_circle_graph">원 그래프로 한눈에 보기!</h2>
     <!--Load the AJAX API-->
     <script src="https://common.gaon.xyz/js/google_chart/loader.js"></script>
     <script>
@@ -147,11 +147,11 @@ A:hover {text-decoration:none; color:#000000;}
           ['SCRIPT 태그', 19],
           ['LINK 태그', 8],
           ['img 태그', 1],
-		  ['DIV 태그', 78],
-		  ['SPAN 태그', 40],
+		      ['DIV 태그', 78],
+		      ['SPAN 태그', 40],
           ['BR 태그', 42],
           ['HR 태그', 6],
-          ['a 태그', 133],
+          ['a 태그', 127],
           ['h(1~6) 태그', 32]
         ]);
 
