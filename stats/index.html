@@ -5,18 +5,6 @@
     <link rel="stylesheet" href='https://common.gaon.xyz/css/nanum_font/nanumbarungotic.css' type='text/css'>
     <link rel="stylesheet" href="https://common.gaon.xyz/css/counterup/counterup.css" />
 
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <script src="https://common.gaon.xyz/js/jquery/jquery-1.10.2.min.js"></script>
-  <script>
-    jQuery(document).ready(function( $ ) {
-        $('.counter').counterUp({
-            delay: 10,
-            time: 1500
-        });
-    });
-  </script>
 <!--uikit css 불러오기-->
 <link rel="stylesheet" href="https://common.gaon.xyz/css/uikit/uikit.edit.css" />
 <nav class="uk-navbar-container">
@@ -81,13 +69,7 @@ A:visited {text-decoration:none; color:#000000;}
 A:active {text-decoration:none; color:#000000;}
 A:hover {text-decoration:none; color:#000000;}
 </style>
-
-<!--uikit js 불러오기-->
-<script src="https://common.gaon.xyz/js/uikit/uikit.min.js"></script>
-<!--uikit icon js 불러오기-->
-<script src="https://common.gaon.xyz/js/uikit/uikit-icons.min.js"></script>
 </head>
-
 <body>
   <h2>
     이 페이지는?
@@ -135,8 +117,6 @@ A:hover {text-decoration:none; color:#000000;}
       <a>a 태그 사용 횟수<span class="counter">133</span>회&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
       <a>h(1~6) 태그 사용 횟수<span class="counter">32</span>회</a>
   </div>
-    <script src="https://common.gaon.xyz/js/waypoints/waypoints.min.js"></script>
-    <script src="https://common.gaon.xyz/js/jquery.counterup/jquery.counterup.min.js"></script>
   <br>
   <hr>
   <br>
@@ -188,5 +168,23 @@ A:hover {text-decoration:none; color:#000000;}
   <!--Div that will hold the pie chart-->
   <div id="chart_div"></div>
 
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="https://common.gaon.xyz/js/jquery/jquery-1.10.2.min.js"></script>
+  <script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1500
+        });
+    });
+  </script>
+<script src="https://common.gaon.xyz/js/waypoints/waypoints.min.js"></script>
+<script src="https://common.gaon.xyz/js/jquery.counterup/jquery.counterup.min.js"></script>
+<!--uikit js 불러오기-->
+<script src="https://common.gaon.xyz/js/uikit/uikit.min.js"></script>
+<!--uikit icon js 불러오기-->
+<script src="https://common.gaon.xyz/js/uikit/uikit-icons.min.js"></script>
 </body>
 </html>
